@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: SpringSecurityApplication
+  datasource:
+    url: ${POSTGRES_URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASS}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secret: ${SECRET_TOKEN}
+  tokenExpiration: 1m
+  refreshTokenExpiration: 10m
